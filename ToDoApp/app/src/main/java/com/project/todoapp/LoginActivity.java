@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import io.realm.Realm;
+import io.realm.RealmConfiguration;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -31,6 +32,9 @@ public class LoginActivity extends AppCompatActivity {
         if(username.getText().toString().equals("") || password.getText().toString().equals(""))
             Toast.makeText(this,"Fields cannot be empty",Toast.LENGTH_LONG).show();
         else{
+            /*RealmConfiguration config = new RealmConfiguration.Builder()
+                    .deleteRealmIfMigrationNeeded()
+                    .build();*/
             Realm realm=Realm.getDefaultInstance();
             User user=realm.where(User.class).equalTo("username",username.getText().toString()).findFirst();
             if(user==null){
@@ -40,8 +44,9 @@ public class LoginActivity extends AppCompatActivity {
                 String userpass=user.getPassword();
                 if(password.getText().toString().equals(userpass)) {
                     realm.close();
-                    Toast.makeText(this, "Login Successful", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this,"Welcome " + username.getText().toString(),Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(this, ToDoTaskList.class);
+                    intent.putExtra("username",username.getText().toString());
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);
