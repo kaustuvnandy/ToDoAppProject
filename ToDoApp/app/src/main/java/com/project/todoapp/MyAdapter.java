@@ -31,7 +31,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public void onBindViewHolder(@NonNull MyViewHolder holder,int position){
         Tasks task=userTasks.get(position);
         holder.task_name.setText(task.getTask_name());
-        holder.due_date.setText(task.getDate());
+        holder.due_date.setText("Due by " + task.getDate());
         holder.checkbox.setChecked(task.isCheck_task());
         //relative layout background color left;
     }

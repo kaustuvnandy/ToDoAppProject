@@ -56,17 +56,16 @@
             android:text="Mark All As Done"
             android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-            app:layout_constraintEnd_toEndOf="@+id/linearLayout"
-            app:layout_constraintStart_toEndOf="@+id/create_task"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout"
             app:layout_constraintTop_toTopOf="@+id/linearLayout" />
 
         <Button
             android:id="@+id/refresh_activity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
-            android:text="refresh"
-            android:onClick="onClickRefresh"/>
+            android:background="@drawable/refresh_logo"
+            android:onClick="onClickRefresh" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -84,8 +83,8 @@
         android:id="@+id/empty_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-39dp">
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="0dp">
 
 
     </FrameLayout>
