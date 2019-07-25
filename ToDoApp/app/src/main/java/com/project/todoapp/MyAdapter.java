@@ -1,6 +1,7 @@
 package com.project.todoapp;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,12 +34,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         holder.task_name.setText(task.getTask_name());
         holder.due_date.setText("Due by " + task.getDate());
         holder.checkbox.setChecked(task.isCheck_task());
+        holder.relativeLayout.setBackgroundColor(Integer.parseInt(task.getTask_color()));
         //relative layout background color left;
     }
     @Override
     public int getItemCount(){return userTasks.size();}
     public class MyViewHolder extends RecyclerView.ViewHolder{
-        private TextView task_details,due_date,task_name;
+        private TextView task_details,due_date,task_name,task_color;
         private RadioButton checkbox;
         private RelativeLayout relativeLayout;
         public MyViewHolder(@NonNull View itemView){

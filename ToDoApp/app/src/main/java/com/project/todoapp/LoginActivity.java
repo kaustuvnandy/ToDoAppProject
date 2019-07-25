@@ -32,9 +32,11 @@ public class LoginActivity extends AppCompatActivity {
         if(username.getText().toString().equals("") || password.getText().toString().equals(""))
             Toast.makeText(this,"Fields cannot be empty",Toast.LENGTH_LONG).show();
         else{
-            /*RealmConfiguration config = new RealmConfiguration.Builder()
+            /*
+            RealmConfiguration config = new RealmConfiguration.Builder()
                     .deleteRealmIfMigrationNeeded()
-                    .build();*/
+                    .build();
+            */
             Realm realm=Realm.getDefaultInstance();
             User user=realm.where(User.class).equalTo("username",username.getText().toString()).findFirst();
             if(user==null){

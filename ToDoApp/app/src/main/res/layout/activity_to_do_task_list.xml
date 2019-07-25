@@ -6,32 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".ToDoTaskList">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="403dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:background="#3F51B5"
-        android:text="To-Do Task List"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="403dp"
-        android:layout_height="84dp"
+        android:layout_width="405dp"
+        android:layout_height="81dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:background="#A6D3D3D3"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        tools:layout_editor_absoluteY="4dp">
 
         <Button
             android:id="@+id/create_task"
@@ -69,22 +54,22 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="395dp"
-        android:layout_height="559dp"
+        android:id="@+id/task_recycler"
+        android:layout_width="397dp"
+        android:layout_height="633dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        android:id="@+id/task_recycler"/>
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <FrameLayout
         android:id="@+id/empty_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="0dp">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-91dp">
 
 
     </FrameLayout>

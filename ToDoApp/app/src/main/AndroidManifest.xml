@@ -9,14 +9,14 @@
         android:name=".ApplicationClass"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="To Do App"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CreateToDoTask"></activity>
-        <activity android:name=".ToDoTaskList" />
-        <activity android:name=".SignUpActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".CreateToDoTask" android:label="Create To Do task"></activity>
+        <activity android:name=".ToDoTaskList" android:label="To Do Task List"/>
+        <activity android:name=".SignUpActivity" android:label="Sign Up"/>
+        <activity android:name=".LoginActivity" android:label="Login Page">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

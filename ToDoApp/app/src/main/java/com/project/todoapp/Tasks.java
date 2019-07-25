@@ -7,7 +7,7 @@ public class Tasks extends RealmObject {
 
     @PrimaryKey
     private long id;
-    private String username,task_details,date,task_name;
+    private String username,task_details,date,task_name,task_color;
     boolean check_task;
 
     public long getId() {
@@ -57,4 +57,8 @@ public class Tasks extends RealmObject {
     public void setTask_name(String task_name) {
         this.task_name = task_name;
     }
+
+    public String getTask_color(){return task_color;}
+
+    public void setTask_color(String color){task_color=color;}
 }
