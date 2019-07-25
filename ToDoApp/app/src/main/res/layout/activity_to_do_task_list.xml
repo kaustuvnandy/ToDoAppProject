@@ -23,10 +23,11 @@
             android:layout_height="75dp"
             android:layout_marginStart="60dp"
             android:layout_marginEnd="8dp"
-            android:background="#73C2EB"
+            android:background="@color/colorPrimaryDark"
             android:onClick="onClickCreateTask"
             android:text="Create Task"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent" />
 
         <Button
             android:id="@+id/all_done"
@@ -34,10 +35,11 @@
             android:layout_height="75dp"
             android:layout_marginStart="26dp"
             android:layout_marginEnd="52dp"
-            android:background="#FFC107"
+            android:background="@color/colorPrimaryDark"
             android:onClick="onClickMarkAllDone"
             android:text="Mark All As Done"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent" />
 
     </LinearLayout>
 

@@ -72,7 +72,6 @@ public class CreateToDoTask extends AppCompatActivity implements ColorPickerDial
     private void updateLabel() {
         String myFormat = "dd/MM/yyyy";
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
-
         task_date.setText(sdf.format(myCalendar.getTime()));
     }
 

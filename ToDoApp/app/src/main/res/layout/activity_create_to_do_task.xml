@@ -12,23 +12,24 @@
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Name"
+        android:text="Name:"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.027"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="61dp" />
+        tools:layout_editor_absoluteY="73dp" />
 
     <EditText
         android:id="@+id/task_name"
         android:layout_width="386dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -37,11 +38,11 @@
         android:layout_width="105dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
-        android:text="Date"
+        android:text="Date:"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.027"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/task_name" />
 
@@ -50,7 +51,7 @@
         android:layout_width="386dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
         android:clickable="true"
         android:editable="false"
@@ -59,7 +60,7 @@
         android:longClickable="false"
         android:textAlignment="textEnd"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -68,11 +69,12 @@
         android:layout_width="386dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_date" />
 
@@ -81,24 +83,25 @@
         android:layout_width="105dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:text="Task Details"
+        android:text="Task Details:"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.027"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textBox" />
 
     <EditText
         android:id="@+id/task_details"
-        android:layout_width="379dp"
-        android:layout_height="39dp"
+        android:layout_width="388dp"
+        android:layout_height="42dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -107,11 +110,11 @@
         android:layout_width="105dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Holder Color"
+        android:text="Holder Color:"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.027"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/task_details" />
 
@@ -120,7 +123,6 @@
         android:layout_width="386dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:focusable="false"
@@ -132,7 +134,7 @@
         android:textColor="@android:color/transparent"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -141,29 +143,37 @@
         android:layout_width="163dp"
         android:layout_height="52dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
-        android:background="@android:color/holo_green_light"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimaryDark"
         android:onClick="onClickSaveTask"
         android:text="Save Task"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.034"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/holder_color" />
+        app:layout_constraintTop_toBottomOf="@+id/holder_color"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/discard_task"
         android:layout_width="163dp"
         android:layout_height="52dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
-        android:background="@android:color/holo_red_dark"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimaryDark"
         android:onClick="onClickDiscardTask"
         android:text="Discard Task"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.981"
+        app:layout_constraintHorizontal_bias="0.868"
         app:layout_constraintStart_toEndOf="@+id/save_task"
-        app:layout_constraintTop_toBottomOf="@+id/holder_color" />
+        app:layout_constraintTop_toBottomOf="@+id/holder_color"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

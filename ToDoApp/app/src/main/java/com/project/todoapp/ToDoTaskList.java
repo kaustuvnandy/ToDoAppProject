@@ -49,6 +49,13 @@ public class ToDoTaskList extends AppCompatActivity {
 
         Bundle bundle=getIntent().getExtras();
         user=bundle.getString("username");
+        //Not Working
+        /*
+        LayoutInflater inflater=getLayoutInflater();
+        View mview=inflater.inflate(R.layout.nav_header,null);
+        TextView txtName=mview.findViewById(R.id.textUserName);
+        txtName.setText("Logged in by " + user);
+        */
         mRecyclerView=findViewById(R.id.task_recycler);
         /*RealmConfiguration config = new RealmConfiguration.Builder()
                 .deleteRealmIfMigrationNeeded()
