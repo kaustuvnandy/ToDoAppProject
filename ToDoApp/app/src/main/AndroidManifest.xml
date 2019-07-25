@@ -16,7 +16,7 @@
         <activity android:name=".CreateToDoTask" android:label="Create To Do task"></activity>
         <activity android:name=".ToDoTaskList" android:label="To Do Task List"/>
         <activity android:name=".SignUpActivity" android:label="Sign Up"/>
-        <activity android:name=".LoginActivity" android:label="Login Page">
+        <activity android:name=".LoginActivity" android:label="To Do App">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

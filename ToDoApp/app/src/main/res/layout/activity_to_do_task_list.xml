@@ -11,12 +11,13 @@
         android:layout_width="405dp"
         android:layout_height="81dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
         android:background="#A6D3D3D3"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="4dp">
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/create_task"
@@ -44,13 +45,6 @@
             app:layout_constraintStart_toStartOf="@+id/linearLayout"
             app:layout_constraintTop_toTopOf="@+id/linearLayout" />
 
-        <Button
-            android:id="@+id/refresh_activity"
-            android:layout_width="40dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="@drawable/refresh_logo"
-            android:onClick="onClickRefresh" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
