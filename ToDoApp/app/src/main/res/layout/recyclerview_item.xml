@@ -36,18 +36,23 @@
             android:textColor="@android:color/black"
             android:textSize="14sp" />
 
-            <RadioButton
-                android:id="@+id/check_box"
-                android:layout_width="48dp"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@id/task_details"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="80dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="14dp"
-                android:layout_marginBottom="12dp"
-                android:layout_toEndOf="@+id/task_details" />
-        </RelativeLayout>
+        <CheckBox
+            android:id="@+id/check_box"
+            android:layout_width="55dp"
+            android:layout_height="47dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="73dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/task_name"
+            android:buttonTint="@android:color/black"
+            android:textColor="@android:color/black"
+            android:textColorHighlight="#00111010"
+            android:textColorHint="@android:color/black"
+            android:textColorLink="@android:color/black"/>
+    </RelativeLayout>
 
 </RelativeLayout>

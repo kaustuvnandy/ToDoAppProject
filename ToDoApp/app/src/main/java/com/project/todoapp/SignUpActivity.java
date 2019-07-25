@@ -11,7 +11,7 @@ import android.widget.Toast;
 import io.realm.Realm;
 import io.realm.RealmResults;
 
-public class SignUpActivity extends AppCompatActivity {
+public class    SignUpActivity extends AppCompatActivity {
 
     EditText name,username,password;
 

@@ -28,6 +28,7 @@ public class ToDoTaskList extends AppCompatActivity {
     RecyclerView mRecyclerView;
     private Boolean exit=false;
     String user;
+    RealmResults<Tasks> userTasks;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +38,11 @@ public class ToDoTaskList extends AppCompatActivity {
         Bundle bundle=getIntent().getExtras();
         user=bundle.getString("username");
         mRecyclerView=findViewById(R.id.task_recycler);
-        RealmConfiguration config = new RealmConfiguration.Builder()
+        /*RealmConfiguration config = new RealmConfiguration.Builder()
                 .deleteRealmIfMigrationNeeded()
-                .build();
+                .build();*/
         Realm realm=Realm.getDefaultInstance();
-        RealmResults<Tasks>userTasks=realm.where(Tasks.class).equalTo("username",user).findAll();
+        userTasks=realm.where(Tasks.class).equalTo("username",user).findAll();
         if(userTasks.size()==0)
             fragment();
         else {
@@ -49,7 +50,6 @@ public class ToDoTaskList extends AppCompatActivity {
             mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
             mRecyclerView.setAdapter(myAdapter);
         }
-
     }
 
     @Override
@@ -107,6 +107,26 @@ public class ToDoTaskList extends AppCompatActivity {
             }, 3 * 1000);
 
         }
-
     }
+    public void onClickMarkAllDone(View view){
+        Tasks task;
+        for(int i=0;i<userTasks.size();i++){
+            task=userTasks.get(i);
+            Realm realm=Realm.getDefaultInstance();
+            realm.beginTransaction();
+            try {
+                task.setCheck_task(true);
+                realm.commitTransaction();
+            }
+            catch (Exception ex)
+            {
+                realm.cancelTransaction();
+            }
+            realm.close();
+        }
+        MyAdapter myAdapter=new MyAdapter(userTasks,this);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.setAdapter(myAdapter);
+    }
+
 }

@@ -43,7 +43,8 @@
             android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
             app:layout_constraintStart_toStartOf="@+id/linearLayout"
-            app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+            app:layout_constraintTop_toTopOf="@+id/linearLayout"
+            android:onClick="onClickMarkAllDone"/>
 
     </LinearLayout>
 
