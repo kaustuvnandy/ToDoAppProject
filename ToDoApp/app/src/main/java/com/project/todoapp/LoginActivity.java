@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import io.realm.Realm;
@@ -47,6 +49,10 @@ public class LoginActivity extends AppCompatActivity {
                 if(password.getText().toString().equals(userpass)) {
                     realm.close();
                     Toast.makeText(this,"Welcome " + username.getText().toString(),Toast.LENGTH_LONG).show();
+                    LayoutInflater inflater=getLayoutInflater();
+                    View mview=inflater.inflate(R.layout.nav_header,null);
+                    TextView txtName=mview.findViewById(R.id.textUserName);
+                    txtName.setText("Logged in by "+username.getText());
                     Intent intent = new Intent(this, ToDoTaskList.class);
                     intent.putExtra("username",username.getText().toString());
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
