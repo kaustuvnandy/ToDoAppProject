@@ -101,7 +101,7 @@ public class CreateToDoTask extends AppCompatActivity implements ColorPickerDial
                 Toast.makeText(this, "Failure", Toast.LENGTH_LONG).show();
             }
             realm.close();
-            Toast.makeText(getApplicationContext(),"Refresh to load items",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"Refresh to load Items",Toast.LENGTH_LONG).show();
             finish();
         }
     }
