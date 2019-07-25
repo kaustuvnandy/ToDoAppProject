@@ -34,7 +34,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         holder.task_name.setText(task.getTask_name());
         holder.due_date.setText("Due by " + task.getDate());
         holder.checkbox.setChecked(task.isCheck_task());
-        holder.relativeLayout.setBackgroundColor(Integer.parseInt(task.getTask_color()));
+        holder.relativeLayout.setBackgroundColor(Integer.parseInt(!task.getTask_color().equals("")?task.getTask_color():"-1"));
         //relative layout background color left;
     }
     @Override
