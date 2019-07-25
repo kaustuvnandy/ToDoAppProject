@@ -25,6 +25,8 @@ import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
+import org.w3c.dom.Text;
+
 import javax.annotation.OverridingMethodsMustInvokeSuper;
 
 import io.realm.Realm;
@@ -62,6 +64,8 @@ public class ToDoTaskList extends AppCompatActivity {
                 .build();*/
         Realm realm=Realm.getDefaultInstance();
         userTasks=realm.where(Tasks.class).equalTo("username",user).findAll();
+        User nm=realm.where(User.class).equalTo("username",user).findFirst();
+        String name=nm.getName();
         if(userTasks.size()==0)
             fragment();
         else {
@@ -71,6 +75,9 @@ public class ToDoTaskList extends AppCompatActivity {
         }
         dl = findViewById(R.id.rootLayout);
         nv = findViewById(R.id.navigationView);
+        View navView=nv.getHeaderView(0);
+        TextView nav_nameText=navView.findViewById(R.id.textUserName);
+        nav_nameText.setText("Welcome "+name);
         toggle = new ActionBarDrawerToggle(this, dl, R.string.open_menu, R.string.close_menu);
         dl.addDrawerListener(toggle);
         toggle.syncState();
