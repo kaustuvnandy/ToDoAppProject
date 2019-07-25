@@ -66,6 +66,7 @@ public class CreateToDoTask extends AppCompatActivity implements ColorPickerDial
     }
 
     public void onColorClick(View view){
+        Toast.makeText(getApplicationContext(),"Tap the middle to select",Toast.LENGTH_LONG).show();
         new ColorPickerDialog(this,this, mPaint.getColor()).show();
     }
 

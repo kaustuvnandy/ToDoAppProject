@@ -51,13 +51,6 @@ public class ToDoTaskList extends AppCompatActivity {
 
         Bundle bundle=getIntent().getExtras();
         user=bundle.getString("username");
-        //Not Working
-        /*
-        LayoutInflater inflater=getLayoutInflater();
-        View mview=inflater.inflate(R.layout.nav_header,null);
-        TextView txtName=mview.findViewById(R.id.textUserName);
-        txtName.setText("Logged in by " + user);
-        */
         mRecyclerView=findViewById(R.id.task_recycler);
         /*RealmConfiguration config = new RealmConfiguration.Builder()
                 .deleteRealmIfMigrationNeeded()
@@ -77,7 +70,7 @@ public class ToDoTaskList extends AppCompatActivity {
         nv = findViewById(R.id.navigationView);
         View navView=nv.getHeaderView(0);
         TextView nav_nameText=navView.findViewById(R.id.textUserName);
-        nav_nameText.setText("Welcome "+name);
+        nav_nameText.setText("Logged in as "+name);
         toggle = new ActionBarDrawerToggle(this, dl, R.string.open_menu, R.string.close_menu);
         dl.addDrawerListener(toggle);
         toggle.syncState();
